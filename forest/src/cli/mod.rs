@@ -5,10 +5,13 @@ mod chain_cmd;
 mod config;
 mod fetch_params_cmd;
 mod genesis;
+mod net_cmd;
 
 pub(super) use self::chain_cmd::ChainCommands;
 pub use self::config::Config;
 pub(super) use self::fetch_params_cmd::FetchCommands;
+pub(super) use self::net_cmd::NetCommands;
+
 pub(super) use self::genesis::initialize_genesis;
 
 use jsonrpc_v2::Error as JsonRpcError;
@@ -47,6 +50,9 @@ pub enum Subcommand {
 
     #[structopt(name = "chain", about = "Interact with Filecoin blockchain")]
     Chain(ChainCommands),
+
+    #[structopt(name = "net", about = "Manage P2P Network")]
+    Net(NetCommands),
 }
 
 /// Daemon process command line options.
