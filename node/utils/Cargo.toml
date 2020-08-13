@@ -8,6 +8,8 @@ edition = "2018"
 dirs = "3.0"
 toml = "0.5.5"
 serde = "1.0"
+libp2p = "0.21.1"
+clock = { path = "../../node/clock" }
 
 [dev-dependencies]
 serde_derive = "1.0"

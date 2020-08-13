@@ -1,6 +1,8 @@
 // Copyright 2020 ChainSafe Systems
 // SPDX-License-Identifier: Apache-2.0, MIT
 
+pub mod score;
+
 use dirs::home_dir;
 use std::fs::{create_dir_all, File};
 use std::io::{prelude::*, Result};

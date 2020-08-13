@@ -91,6 +91,9 @@ pub(super) async fn start(config: Config) {
         p2p_service.run().await;
     });
 
+    //let s_test = &p2p_service.swarm;
+
+
     let rpc_task = if config.enable_rpc {
         let db_rpc = Arc::clone(&db);
         let keystore_rpc = Arc::clone(&keystore);
