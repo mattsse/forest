@@ -1,14 +1,14 @@
 [package]
 name = "commcid"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
-num-traits = "0.2"
-num-derive = "0.3"
 cid = { package = "forest_cid", path = "../../ipld/cid" }
 filecoin-proofs-api = "4.0.1"
+num-derive = "0.3"
+num-traits = "0.2"
 
 [dev-dependencies]
 rand = "0.7.3"

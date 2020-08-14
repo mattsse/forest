@@ -1,15 +1,15 @@
 [package]
 name = "ipld_blockstore"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
 cid = { package = "forest_cid", path = "../cid" }
+commcid = { path = "../../utils/commcid" }
 db = { path = "../../node/db" }
 encoding = { package = "forest_encoding", path = "../../encoding" }
 forest_ipld = { path = "../" }
-commcid = { path = "../../utils/commcid" }
 
 [features]
-rocksdb = ["db/rocksdb"]
+rocksdb = [ "db/rocksdb" ]

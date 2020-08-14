@@ -1,25 +1,25 @@
 [package]
 name = "fil_types"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [package.metadata.docs.rs]
-features = ["json"]
+features = [ "json" ]
 
 [dependencies]
-serde = { version = "1.0", features = ["derive"] }
-commcid = { path = "../utils/commcid" }
-filecoin-proofs-api = "4.0.1"
-vm = { package = "forest_vm", path = "../vm" }
-cid = { package = "forest_cid", path = "../ipld/cid", features = ["cbor"] }
-num-bigint = { path = "../utils/bigint", package = "forest_bigint" }
-num-traits = "0.2"
-num-derive = "0.3.0"
-encoding = { package = "forest_encoding", path = "../encoding" }
-clock = { path = "../node/clock" }
 base64 = { version = "0.12.1", optional = true }
+cid = { package = "forest_cid", path = "../ipld/cid", features = [ "cbor" ] }
+clock = { path = "../node/clock" }
+commcid = { path = "../utils/commcid" }
+encoding = { package = "forest_encoding", path = "../encoding" }
+filecoin-proofs-api = "4.0.1"
 forest_json_utils = { path = "../utils/json_utils", optional = true }
+num-bigint = { path = "../utils/bigint", package = "forest_bigint" }
+num-derive = "0.3.0"
+num-traits = "0.2"
+serde = { version = "1.0", features = [ "derive" ] }
+vm = { package = "forest_vm", path = "../vm" }
 
 [features]
-json = ["base64", "forest_json_utils"]
+json = [ "base64", "forest_json_utils" ]

@@ -1,19 +1,19 @@
 [package]
 name = "state_tree"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
 actor = { path = "../actor" }
 address = { package = "forest_address", path = "../address" }
-vm = { package = "forest_vm", path = "../../vm" }
 cid = { package = "forest_cid", path = "../../ipld/cid" }
-ipld_hamt = { path = "../../ipld/hamt" }
-ipld_blockstore = { path = "../../ipld/blockstore" }
 db = { path = "../../node/db" }
-parking_lot = "0.10.0"
 fnv = "1.0.6"
+ipld_blockstore = { path = "../../ipld/blockstore" }
+ipld_hamt = { path = "../../ipld/hamt" }
+parking_lot = "0.10.0"
+vm = { package = "forest_vm", path = "../../vm" }
 
 [dev-dependencies]
 num-bigint = { path = "../../utils/bigint", package = "forest_bigint" }

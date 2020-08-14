@@ -1,33 +1,33 @@
 [package]
 name = "message_pool"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
 address = { package = "forest_address", path = "../../vm/address" }
-vm = { package = "forest_vm", path = "../../vm" }
+async-std = "1.6.0"
+blake2b_simd = "0.5.10"
 blocks = { package = "forest_blocks", path = "../blocks" }
-message = { package = "forest_message", path = "../../vm/message" }
-thiserror = "1.0"
-cid = { package = "forest_cid", path = "../../ipld/cid", version = "0.1" }
-encoding = { package = "forest_encoding", path = "../../encoding", version = "0.1" }
 blockstore = { package = "ipld_blockstore", path = "../../ipld/blockstore/" }
-num-bigint = { path = "../../utils/bigint", package = "forest_bigint" }
-lru = "0.5.1"
+chain = { path = "../chain" }
+cid = { package = "forest_cid", path = "../../ipld/cid", version = "0.1" }
 crypto = { package = "forest_crypto", path = "../../crypto", version = "0.2" }
-chain = { path = "../chain"}
-state_tree = { path = "../../vm/state_tree/" }
-serde = { version = "1.0", features = ["derive"] }
 db = { path = "../../node/db" }
+encoding = { package = "forest_encoding", path = "../../encoding", version = "0.1" }
 flo_stream = "0.4.0"
 futures = "0.3.5"
+key_management = { path = "../../key_management" }
 libsecp256k1 = "0.3.4"
-blake2b_simd = "0.5.10"
 log = "0.4.8"
-async-std = "1.6.0"
-key_management = { path = "../../key_management"}
+lru = "0.5.1"
+message = { package = "forest_message", path = "../../vm/message" }
+num-bigint = { path = "../../utils/bigint", package = "forest_bigint" }
+serde = { version = "1.0", features = [ "derive" ] }
+state_tree = { path = "../../vm/state_tree/" }
+thiserror = "1.0"
+vm = { package = "forest_vm", path = "../../vm" }
 
 [dev-dependencies]
 interpreter = { path = "../../vm/interpreter/" }
-key_management = { path = "../../key_management"}
+key_management = { path = "../../key_management" }

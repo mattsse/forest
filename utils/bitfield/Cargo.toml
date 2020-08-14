@@ -8,16 +8,16 @@ authors = [
 edition = "2018"
 
 [dependencies]
-unsigned-varint = "0.4"
-serde = { version = "1.0", features = ["derive"] }
-serde_bytes = "0.11.3"
 ahash = "0.4"
+serde = { version = "1.0", features = [ "derive" ] }
+serde_bytes = "0.11.3"
+unsigned-varint = "0.4"
 
 [dev-dependencies]
-rand_xorshift = "0.2.0"
-rand = "0.7.3"
-encoding = { package = "forest_encoding", path = "../../encoding/" }
 criterion = "0.3"
+encoding = { package = "forest_encoding", path = "../../encoding/" }
+rand = "0.7.3"
+rand_xorshift = "0.2.0"
 
 [[bench]]
 name = "benchmarks"

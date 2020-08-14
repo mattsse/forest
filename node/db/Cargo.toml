@@ -1,11 +1,11 @@
 [package]
 name = "db"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
-rocksdb = { version = "0.14.0", optional = true }
-parking_lot = "0.10.0"
 encoding = { package = "forest_encoding", path = "../../encoding" }
+parking_lot = "0.10.0"
+rocksdb = { version = "0.14.0", optional = true }
 thiserror = "1.0"

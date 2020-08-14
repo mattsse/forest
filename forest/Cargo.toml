@@ -1,39 +1,39 @@
 [package]
 name = "forest"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
-forest_libp2p = { path = "../node/forest_libp2p" }
-utils = { path = "../node/utils" }
-db = { path = "../node/db", features = ["rocksdb"] }
-libp2p = "0.21.1"
-futures = "0.3.5"
-log = "0.4.8"
 async-log = "2.0.0"
-async-std = { version = "1.6.0", features = ["attributes"] }
-serde = { version = "1.0", features = ["derive"] }
-pretty_env_logger = "0.4.0"
-ctrlc = "3.1.4"
-chain_sync = { path = "../blockchain/chain_sync" }
-state_manager = { path = "../blockchain/state_manager" }
-cid = { package = "forest_cid", path = "../ipld/cid", features = ["json"] }
-forest_car = { path = "../ipld/car" }
-blocks = { package = "forest_blocks", path = "../blockchain/blocks" }
-ipld_blockstore = { path = "../ipld/blockstore", features = ["rocksdb"] }
-chain = { path = "../blockchain/chain" }
-structopt = { version = "0.3" }
+async-std = { version = "1.6.0", features = [ "attributes" ] }
 beacon = { path = "../blockchain/beacon" }
-hex = "0.4.2"
-rpc = { path = "../node/rpc" }
-rpc_client = {package = "rpc-client", path = "../node/rpc-client" }
-fil_types = { path = "../types" }
-serde_json = "1.0"
 blake2b_simd = "0.5.9"
-surf = "2.0.0-alpha.4"
+blocks = { package = "forest_blocks", path = "../blockchain/blocks" }
+chain = { path = "../blockchain/chain" }
+chain_sync = { path = "../blockchain/chain_sync" }
+cid = { package = "forest_cid", path = "../ipld/cid", features = [ "json" ] }
+ctrlc = "3.1.4"
+db = { path = "../node/db", features = [ "rocksdb" ] }
+fil_types = { path = "../types" }
+forest_car = { path = "../ipld/car" }
+forest_libp2p = { path = "../node/forest_libp2p" }
+futures = "0.3.5"
+hex = "0.4.2"
+ipld_blockstore = { path = "../ipld/blockstore", features = [ "rocksdb" ] }
+jsonrpc-v2 = { version = "0.5.2", features = [ "easy-errors", "macros" ] }
+libp2p = "0.21.1"
+log = "0.4.8"
+message_pool = { package = "message_pool", path = "../blockchain/message_pool" }
 pbr = "1.0.3"
 pin-project-lite = "0.1"
-message_pool = { package = "message_pool", path = "../blockchain/message_pool" }
-wallet = {package = "key_management", path = "../key_management"}
-jsonrpc-v2 = { version = "0.5.2", features = ["easy-errors", "macros"] }
+pretty_env_logger = "0.4.0"
+rpc = { path = "../node/rpc" }
+rpc_client = { package = "rpc-client", path = "../node/rpc-client" }
+serde = { version = "1.0", features = [ "derive" ] }
+serde_json = "1.0"
+state_manager = { path = "../blockchain/state_manager" }
+structopt = { version = "0.3" }
+surf = "2.0.0-alpha.4"
+utils = { path = "../node/utils" }
+wallet = { package = "key_management", path = "../key_management" }

@@ -1,35 +1,34 @@
 [package]
 name = "state_manager"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
-address = { package = "forest_address", path = "../../vm/address/" }
 actor = { path = "../../vm/actor/" }
+address = { package = "forest_address", path = "../../vm/address/" }
+async-log = "2.0.0"
+async-std = "1.5.0"
+bitfield = { path = "../../utils/bitfield" }
+blockstore = { package = "ipld_blockstore", path = "../../ipld/blockstore/" }
+chain = { path = "../chain" }
 cid = { package = "forest_cid", path = "../../ipld/cid" }
+clock = { path = "../../node/clock" }
 db = { path = "../../node/db/" }
 encoding = { package = "forest_encoding", path = "../../encoding/" }
-num-bigint = { path = "../../utils/bigint", package = "forest_bigint" }
-state_tree = { path = "../../vm/state_tree/" }
-blockstore = { package = "ipld_blockstore", path = "../../ipld/blockstore/" }
+fil_types = { path = "../../types" }
+filecoin-proofs-api = "4.0.1"
+flo_stream = "0.4.0"
 forest_blocks = { path = "../../blockchain/blocks" }
-thiserror = "1.0"
+futures = "0.3.5"
 interpreter = { path = "../../vm/interpreter/" }
 ipld_amt = { path = "../../ipld/amt/" }
-clock = { path = "../../node/clock" }
-chain = { path = "../chain" }
-async-std = "1.5.0"
-async-log = "2.0.0"
-log = "0.4.8"
-fil_types = { path = "../../types" }
-message = { package = "forest_message", path = "../../vm/message" }
-vm = { package = "forest_vm", path = "../../vm" }
-bitfield = { path = "../../utils/bitfield" }
-serde = { version = "1.0", features = ["derive"] }
 ipld_hamt = { path = "../../ipld/hamt" }
+log = "0.4.8"
+message = { package = "forest_message", path = "../../vm/message" }
+num-bigint = { path = "../../utils/bigint", package = "forest_bigint" }
 num-traits = "0.2.11"
-flo_stream = "0.4.0"
-filecoin-proofs-api = "4.0.1"
-futures = "0.3.5"
-
+serde = { version = "1.0", features = [ "derive" ] }
+state_tree = { path = "../../vm/state_tree/" }
+thiserror = "1.0"
+vm = { package = "forest_vm", path = "../../vm" }

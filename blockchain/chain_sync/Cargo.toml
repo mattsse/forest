@@ -1,40 +1,40 @@
 [package]
 name = "chain_sync"
 version = "0.1.0"
-authors = ["ChainSafe Systems <info@chainsafe.io>"]
+authors = [ "ChainSafe Systems <info@chainsafe.io>" ]
 edition = "2018"
 
 [dependencies]
 address = { package = "forest_address", path = "../../vm/address" }
-vm = { package = "forest_vm", path = "../../vm" }
 amt = { package = "ipld_amt", path = "../../ipld/amt" }
-blocks = { package = "forest_blocks", path = "../blocks", features = ["json"] }
+async-std = { version = "1.6.0", features = [ "unstable" ] }
 beacon = { path = "../beacon" }
+blocks = { package = "forest_blocks", path = "../blocks", features = [ "json" ] }
+chain = { path = "../chain" }
+cid = { package = "forest_cid", path = "../../ipld/cid" }
+clock = { path = "../../node/clock" }
+commcid = { path = "../../utils/commcid" }
+crypto = { package = "forest_crypto", path = "../../crypto" }
 db = { path = "../../node/db" }
 encoding = { package = "forest_encoding", path = "../../encoding" }
-libp2p = "0.21.1"
-cid = { package = "forest_cid", path = "../../ipld/cid" }
-ipld_blockstore = { path = "../../ipld/blockstore" }
-chain = { path = "../chain" }
-message = { package = "forest_message", path = "../../vm/message" }
-state_tree = { path = "../../vm/state_tree/" }
-state_manager = { path = "../state_manager/" }
-num-bigint = { path = "../../utils/bigint", package = "forest_bigint" }
-crypto = { package = "forest_crypto", path = "../../crypto" }
-log = "0.4.8"
-async-std = { version = "1.6.0", features = ["unstable"] }
+fil_types = { path = "../../types" }
+filecoin-proofs-api = "4.0.1"
+flo_stream = "0.4.0"
 forest_libp2p = { path = "../../node/forest_libp2p" }
 futures = "0.3.5"
+ipld_blockstore = { path = "../../ipld/blockstore" }
+libp2p = "0.21.1"
+log = "0.4.8"
 lru = "0.5.1"
-thiserror = "1.0"
+message = { package = "forest_message", path = "../../vm/message" }
+num-bigint = { path = "../../utils/bigint", package = "forest_bigint" }
 num-traits = "0.2"
-filecoin-proofs-api = "4.0.1"
-fil_types = { path = "../../types" }
-commcid = { path = "../../utils/commcid" }
-clock = { path = "../../node/clock" }
-serde = { version = "1.0", features = ["derive", "rc"] }
-flo_stream = "0.4.0"
+serde = { version = "1.0", features = [ "derive", "rc" ] }
+state_manager = { path = "../state_manager/" }
+state_tree = { path = "../../vm/state_tree/" }
+thiserror = "1.0"
+vm = { package = "forest_vm", path = "../../vm" }
 
 [dev-dependencies]
-test_utils = { version = "0.1.0", path = "../../utils/test_utils/", features = ["test_constructors"] }
 base64 = "0.12.1"
+test_utils = { version = "0.1.0", path = "../../utils/test_utils/", features = [ "test_constructors" ] }
