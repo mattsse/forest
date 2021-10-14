@@ -17,7 +17,7 @@ use std::marker::PhantomData;
 
 /// Node in Hamt tree which contains bitfield of set indexes and pointers to nodes
 #[derive(Debug)]
-pub(crate) struct Node<K, V, H> {
+pub struct Node<K, V, H> {
     pub(crate) bitfield: Bitfield,
     pub(crate) pointers: Vec<Pointer<K, V, H>>,
     hash: PhantomData<H>,
