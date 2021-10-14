@@ -9,7 +9,7 @@ use serde::{
 
 /// Root of an AMT vector, can be serialized and keeps track of height and count
 #[derive(PartialEq, Debug)]
-pub(super) struct Root<V> {
+pub struct Root<V> {
     pub bit_width: usize,
     pub height: usize,
     pub count: usize,
@@ -17,7 +17,7 @@ pub(super) struct Root<V> {
 }
 
 impl<V> Root<V> {
-    pub(super) fn new(bit_width: usize) -> Self {
+    pub fn new(bit_width: usize) -> Self {
         Self {
             bit_width,
             count: 0,
